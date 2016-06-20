@@ -16,8 +16,8 @@ Else SSH will wait for password to be entered by user.
 ### Dependencies
 * Python 2.7 (Developed and Tested)
 
-### Compiling & Configuring
-1. Clone this Repo
+### Installing
+1. Clone/Download this Repo
 2. Run `python setup.py install`
 3. Copy the [default YAML file](#yaml-config) to `~` (users home directory).
 
@@ -50,9 +50,9 @@ It holds all the configuration attributes for Synclady.
     server: /uploads/username/
     ip: sample@192.168.1.1
   endpoints:
-    file_create: "http://localhost/api/v2/files/create"
-    file_destroy: "http://localhost/api/v2/files/destroy"
-    folder_destroy: "http://localhost/api/v2/folders/destroy"
+    file_create: "http://192.168.1.1/api/files/create"
+    file_destroy: "http://192.168.1.1/api/files/destroy"
+    folder_destroy: "http://192.168.1.1/api/folders/destroy"
 ```
 
 ### Logs
