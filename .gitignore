@@ -1,0 +1,9 @@
+*.DS_STORE
+*.pid
+*.pyc
+*.log
+dump.rdb
+venv
+synclady.egg-info
+build
+dist

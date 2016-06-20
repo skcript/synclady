@@ -1,0 +1,8 @@
+pyyaml
+logging
+watchdog
+observer
+requests
+hiredis
+rq
+rratelimit
