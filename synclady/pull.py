@@ -18,4 +18,4 @@ class Pull():
         # Sync everything in server to local
         src = get_source_server()
         dest = get_source_local()
-        subprocess.call(['rsync', '-avzr', '--delete-after', '--exclude ".*/"', src, dest])
+        subprocess.call(['rsync', '-avzr', '--exclude', '.*', '--delete-after', src, dest])
