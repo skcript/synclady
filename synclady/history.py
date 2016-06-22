@@ -17,7 +17,7 @@ class History():
 
         src = get_source_local()
         dest = get_source_server()
-        cmd = "rsync -nvai --exclude='.*/' {0} {1}".format(src, dest)
+        cmd = "rsync -nvai --exclude='.*' {0} {1}".format(src, dest)
 
         historylist = os.popen(cmd).readlines()
         filelist = []
@@ -47,7 +47,7 @@ class History():
         filelist = History.list()
         src = get_source_local()
         dest = get_source_server()
-        subprocess.call(['rsync', '-avzr', '--exclude ".*/"', src, dest])
+        subprocess.call(['rsync', '-avzr', '--exclude', '.*', src, dest])
 
         for filepath in filelist:
             # TODO: Dev dependencies
@@ -72,4 +72,4 @@ class History():
         # Will delete file/folders after syncing
         src = get_source_server()
         dest = get_source_local()
-        subprocess.call(['rsync', '-avzr', '--delete-after', '--exclude ".*/"', src, dest])
+        subprocess.call(['rsync', '-avzr', '--delete-after', '--exclude', '.*', src, dest])

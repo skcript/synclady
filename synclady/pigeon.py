@@ -37,7 +37,7 @@ def rsync(event):
     """Rsyncs locally created files to server"""
     src = get_source_local()
     dest = get_source_server()
-    subprocess.call(['rsync', '-avzr', '--exclude ".*/"', src, dest])
+    subprocess.call(['rsync', '-avzr', '--exclude', '.*', src, dest])
 
     if event.event_type == "created" and not event.is_directory:
         print "Sending..."
