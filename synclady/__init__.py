@@ -24,6 +24,7 @@ class Synclady():
     @staticmethod
     def sync():
         """Starts file listner"""
+        Synclady.resync()
         FileWatch().start()
 
     @staticmethod

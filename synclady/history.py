@@ -7,6 +7,7 @@ import subprocess
 
 # Modules in Synclady
 import synclady.pigeon
+from synclady.pull import Pull
 from synclady.shared import is_hidden
 from conf import get_source_local, get_source_server
 
@@ -70,6 +71,4 @@ class History():
         # Sync everything in server to local
         # This will bring everything that's been created when offline to local
         # Will delete file/folders after syncing
-        src = get_source_server()
-        dest = get_source_local()
-        subprocess.call(['rsync', '-avzr', '--delete-after', '--exclude', '.*', src, dest])
+        Pull.download()
